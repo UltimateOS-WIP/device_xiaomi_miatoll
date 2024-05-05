@@ -12,6 +12,12 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.qcom.post_boot-atoll.sh",
+    src: "bin/init.qcom.post_boot-atoll.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.qcom.sh",
     src: "bin/init.qcom.sh",
     vendor: true,
@@ -37,13 +43,6 @@ prebuilt_etc {
 }
 
 // Init configuration files
-prebuilt_etc {
-    name: "init.qcom.power.rc",
-    src: "etc/init.qcom.power.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
 prebuilt_etc {
     name: "init.qcom.rc",
     src: "etc/init.qcom.rc",
