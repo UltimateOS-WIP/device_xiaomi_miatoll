@@ -10,10 +10,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 # Inherit some common Genesis stuff.
-$(call inherit-product, vendor/ultimate/config/common_full_phone.mk)
+$(call inherit-product, vendor/halcyon/config/common.mk)
 
 # Inherit from miatoll device
 $(call inherit-product, device/xiaomi/miatoll/miatoll.mk)
+
+# Signing
+-include vendor/unofficial-priv/keys.mk
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -26,9 +29,7 @@ TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_USES_AOSP_RECOVERY := true
 USE_PIXEL_CHARGER := true
 
-ULTIMATE_OFFICIAL := true
-
-PRODUCT_NAME := ultimate_miatoll
+PRODUCT_NAME := halcyon_miatoll
 PRODUCT_DEVICE := miatoll
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi

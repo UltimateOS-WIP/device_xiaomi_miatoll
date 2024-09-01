@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/ultimate_miatoll.mk
+    $(LOCAL_DIR)/halcyon_miatoll.mk
